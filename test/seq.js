@@ -475,6 +475,22 @@ exports.parMapInto = function () {
     ;
 };
 
+exports.parMapCatch = function() {
+    var to = setTimeout(function () {
+        assert.fail('never finished');
+    }, 500);
+
+    Seq([1,2,3,4])
+        .parMap(function (x, y) {
+            this("error");
+        })
+        .catch(function(err) {
+            clearTimeout(to);
+            assert.eql(err, "error");
+        })
+    ;
+};
+
 exports.seqMap = function () {
     var to = setTimeout(function () {
         assert.fail('never finished');
