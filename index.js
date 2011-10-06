@@ -291,6 +291,11 @@ function builder (saw, xs) {
                 context.stack = res;
                 saw.next();
             })
+            .catch(function (err, key) {
+                context.error = { message: err, key: key };
+                saw.down('catch');
+                saw.next();
+            })
         ;
     };
     
