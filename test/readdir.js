@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Seq = require('seq');
+var Seq = require('../index');
 var fs = require('fs');
 
 exports.readdir = function () {

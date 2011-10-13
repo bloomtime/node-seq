@@ -14,8 +14,8 @@
     "devDependencies" : {
         "expresso" : ">=0.7.x"
     },
-    "script" : {
-        "test" : "expresso"
+    "scripts" : {
+        "test" : "./node_modules/expresso/bin/expresso"
     },
     "keywords" : [
         "flow-control", "flow", "control", "async", "asynchronous", "chain",

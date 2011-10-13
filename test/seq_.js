@@ -1,4 +1,4 @@
-var Seq = require('seq');
+var Seq = require('../index');
 var assert = require('assert');
 
 exports.seq_ = function () {
